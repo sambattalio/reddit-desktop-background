@@ -24,3 +24,4 @@ Then, add the following line to crontab window:
 * add init script
 * other os support
 * easier way to change subreddit / frequency
+* REMOVE DEPENDENCY on Virtual environment on my machine
