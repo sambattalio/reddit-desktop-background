@@ -3,10 +3,7 @@ import applescript
 import re
 import requests
 import os
-import pprint
-import schedule
 import sys
-import time
 
 # Globals
 
@@ -16,15 +13,11 @@ URL = BASE + SUB + '/.json'
 
 reddit_header = {'user-agent': 'reddit-{}'.format(os.environ.get('USER', 'sambatt99'))}
 
-HOURS = 24
-
 # Functions
 
 def usage(code=0):
     print('''Usage: {} [options] subreddit_name
     Pick a subreddit that exclusively has images (earthporn,wallpapers,...)
-
-    -n        Number of hours between updates (default=24)
     '''.format(os.path.basename(sys.argv[0])))
     sys.exit(code)
 
@@ -59,17 +52,8 @@ def do_it_all(url=URL):
     change_background(wget(grab_top_post(url)))
     cleanup()
 
-    
-# Handle arguments
-args = sys.argv[1:]
-while len(args) and args[0].startswith('-') and len(args[0]) > 1:
-    arg = args.pop(0)
-    # check arguments
-    if arg == '-h':
-        usage(0)
-    elif arg == '-n':
-        HOURS = int(args.pop(0))
-
+args = sys.argv[1:]    
+# Handle argument
 if len(args) == 1:
     SUB = '/r/' + args.pop(0)
 else:
