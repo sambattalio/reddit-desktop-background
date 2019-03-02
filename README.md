@@ -19,4 +19,8 @@ Then, add the following line to crontab window:
 
 `@hourly ~/Path/to/cloned/repo/runBackground.sh`
 
-*TODO: add init script to do this part for you*
+
+# TODO's
+* add init script
+* other os support
+* easier way to change subreddit / frequency
