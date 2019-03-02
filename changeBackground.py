@@ -4,6 +4,7 @@ import re
 import requests
 import os
 import sys
+import time
 
 # Globals
 
@@ -50,6 +51,7 @@ def cleanup():
 # combine change and cleanup operation
 def do_it_all(url=URL):
     change_background(wget(grab_top_post(url)))
+    time.sleep(1)
     cleanup()
 
 args = sys.argv[1:]    
