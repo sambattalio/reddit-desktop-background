@@ -8,10 +8,11 @@ Made for Mojave 10.14 in python 2.7 (TODO: add linux/windows support)
 * pyobjc
 
 # How to?
-
 ### Mac
 
 `$ git clone https://github.com/sambattalio/reddit-desktop-background.git`
+
+Set subreddit to desired choice in runBackground.sh (default to earthporn)
 
 `$ crontab -e`
 
